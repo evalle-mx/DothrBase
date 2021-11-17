@@ -1,0 +1,107 @@
+[{
+	"idEstatusInscripcion": "2",
+	"nombre": "Choi Soo Young",
+	"email": "choi.Sooyoung@dothr.net",
+	"idTipoRelacion": "9",
+	"idPersona": "1",
+	"idRol":"3",
+	"fechaCreacion":"2019-08-08 13:30:00"
+}, {
+	"idEstatusInscripcion": "2",
+	"nombre": "Ernesto",
+	"email": "ernesto.valle@dothr.net",
+	"idTipoRelacion": "9",
+	"apellidoMaterno": "Tester",
+	"apellidoPaterno": "Valle",
+	"idPersona": "2",
+	"idRol":"1",
+	"fechaCreacion":"2020-08-08 13:30:00"
+}, {
+	"idEstatusInscripcion": "2",
+	"nombre": "Blanca Mónica",
+	"email": "monica.quintero@pirh.com.mx",
+	"idTipoRelacion": "11",
+	"apellidoMaterno": "Luna",
+	"apellidoPaterno": "Quintero",
+	"idPersona": "3",
+	"idRol":"4",
+	"fechaCreacion":"2019-08-08 13:30:00"
+}, {
+	"idEstatusInscripcion": "2",
+	"nombre": "Ana Isabel",
+	"email": "isabel.giles@pirh.com.mx",
+	"idTipoRelacion": "11",
+	"apellidoMaterno": "Martinez",
+	"apellidoPaterno": "Giles",
+	"idPersona": "4",
+	"idRol":"4",
+	"fechaCreacion":"2019-07-08 13:30:00"
+}, {
+	"idEstatusInscripcion": "3",
+	"nombre": "Laura Leticia",
+	"email": "laura.hernandez@pirh.com.mx",
+	"idTipoRelacion": "11",
+	"apellidoMaterno": "Escamilla",
+	"apellidoPaterno": "Hernández",
+	"idPersona": "5",
+	"idRol":"4",
+	"fechaCreacion":"2019-08-08 13:30:00"
+}, {
+	"idEstatusInscripcion": "2",
+	"nombre": "Maria Esther",
+	"email": "mefloresa@gmail.com",
+	"idTipoRelacion": "11",
+	"apellidoMaterno": "Alcantar",
+	"apellidoPaterno": "Flores",
+	"idPersona": "6",
+	"idRol":"5",
+	"fechaCreacion":"2019-08-08 13:30:00"
+}, {
+	"idEstatusInscripcion": "3",
+	"nombre": "Selex",
+	"email": "selex1@selex.com.mx",
+	"idTipoRelacion": "11",
+	"apellidoMaterno": "Demo",
+	"apellidoPaterno": "Contratante",
+	"idPersona": "7",
+	"idRol":"5",
+	"fechaCreacion":"2019-08-08 13:30:00"
+}, {
+	"idEstatusInscripcion": "3",
+	"nombre": "SelexDos",
+	"email": "selex2@selex.com.mx",
+	"idTipoRelacion": "12",
+	"apellidoMaterno": "Demo",
+	"apellidoPaterno": "Operador",
+	"idPersona": "5",
+	"fechaCreacion":"2019-08-08 13:30:00"
+}, {
+	"idEstatusInscripcion": "2",
+	"nombre": "Gabriel",
+	"email": "gsuarez@selex.com.mx",
+	"idTipoRelacion": "12",
+	"apellidoMaterno": "Vidal",
+	"apellidoPaterno": "Suarez",
+	"idPersona": "2",
+	"fechaCreacion":"2019-08-25 13:30:00"
+}, {
+	"idEstatusInscripcion": "2",
+	"nombre": "Ornare",
+	"email": "ornare.lectus.ante@ametrisusDonec.ca",
+	"idTipoRelacion": "12",
+	"apellidoMaterno": "Ante",
+	"apellidoPaterno": "Lectus",
+	"idPersona": "5000",
+	"idRol":"1",
+	"fechaCreacion":"2019-06-08 13:30:00"
+}, {
+	"idEstatusInscripcion": "3",
+	"nombre": "Elon Reeve",
+	"email": "consultor05@todosconempleo.com.mx",
+	"idTipoRelacion": "12",
+	"idRol":"1",
+	"apellidoMaterno": "",
+	"apellidoPaterno": "Musk",
+	"idPersona": "1361",
+	"fechaCreacion":"2020-01-05 21:40:00"
+}]
