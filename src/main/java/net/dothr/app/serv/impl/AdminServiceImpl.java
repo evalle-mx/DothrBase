@@ -3,18 +3,12 @@ package net.dothr.app.serv.impl;
 import java.io.IOException;
 import java.util.List;
 
-import javax.inject.Inject;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-
-import com.google.gson.Gson;
-
 import net.dothr.app.dao.UserDao;
 import net.dothr.app.dto.AdminDto;
 import net.dothr.app.dto.MensajeDto;
@@ -27,16 +21,12 @@ import net.dothr.util.UtilsTce;
 
 @Transactional
 @Service
-public class AdminServiceImpl implements AdminService {
+public class AdminServiceImpl extends _ServiceImpl implements AdminService {
 	
-	static final Logger log4j = LogManager.getLogger( AdminServiceImpl.class );
+	private static final Logger log4j = LoggerFactory.getLogger(AdminServiceImpl.class);
 	
 	private JSONObject jsonObject = null;
-	private final static int F_ADMIN = 18;	
-	private boolean errorFilter = false;
-	
-	@Inject
-	private Gson gson;
+	private final static int F_ADMIN = 18;
 	
 	@Autowired
 	UserDao userDao;
@@ -111,7 +101,7 @@ public class AdminServiceImpl implements AdminService {
 
 	@Override
 	public String menu(MenuDto menuDto) {		
-		return UtilsTce.methodNotImplemented("menu");
+		return notImplemented("menu");	//UtilsTce.methodNotImplemented("menu");
 	}
 	/*  ***************  METODOS NUEVOS/TEMPORALES  *********** */
 	

@@ -1,0 +1,1 @@
+https://howtodoinjava.com/java8/stream-multiple-filters-example/

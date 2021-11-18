@@ -1,0 +1,36 @@
+# Slf4j Configuration File Example  (+ Log4J)
+https://examples.javacodegeeks.com/enterprise-java/slf4j/slf4j-configuration-file-example/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////////// LOGGING ///////////////////
+logging.pattern.console=%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} [%L] : %msg%n
+#Date: %d{HH:mm:ss.SSS}
+# Thread: [%t]
+# Log level: %-5level
+# ?? %logger{36}
+# LineNumber: [%L] 
+# Separador/indicador
+# Mensaje: %msg%n 

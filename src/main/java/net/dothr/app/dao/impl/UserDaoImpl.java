@@ -3,12 +3,13 @@ package net.dothr.app.dao.impl;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.lang.invoke.MethodHandles;
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -34,7 +35,8 @@ public class UserDaoImpl extends _AbstractDao implements UserDao {
 	
 	private List<UsuarioDto> lsUsuarioDto;
 	
-	Logger log4j = LogManager.getLogger( this.getClass());
+	//Logger log4j = LogManager.getLogger( this.getClass());
+	private static final Logger log4j = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
 	@Override
 	public List<TourFromFile> getTours() throws IOException {
@@ -79,9 +81,11 @@ public class UserDaoImpl extends _AbstractDao implements UserDao {
 				lsUsuarioDto = readUsuarios();
 			}
 			System.out.println("Se encontraron " + lsUsuarioDto.size() + " usuarios");
+			log4j.debug("Se encontraron " + lsUsuarioDto.size() + " usuarios");
 		} catch (IOException e) {
 			e.printStackTrace();
-			log4j.error(e);
+			//log4j.error(e);
+			log4j.error( String.valueOf(e) );
 			lsUsuarioDto = null;
 		}
 		
@@ -102,7 +106,7 @@ public class UserDaoImpl extends _AbstractDao implements UserDao {
     }
 	
 	private List<UsuarioDto> readUsuarios() throws IOException {
-    	System.out.println("Reading from file " + adm_users + " ");
+		log4j.debug("leyendo el archivo en proyecto local " + adm_users + " ");
     	return new ObjectMapper().setVisibility(FIELD, ANY).
                 readValue(new FileInputStream(adm_users), new TypeReference<List<UsuarioDto>>() {});
     }

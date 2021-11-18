@@ -7,24 +7,22 @@ import java.util.List;
 import javax.inject.Inject;
 
 import org.apache.commons.lang3.exception.ExceptionUtils;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
 //import org.hibernate.PropertyValueException;
 //import org.hibernate.exception.ConstraintViolationException;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 //import org.springframework.dao.DataIntegrityViolationException;
 //import org.springframework.jdbc.UncategorizedSQLException;
 //import org.springframework.transaction.CannotCreateTransactionException;
+//import com.google.gson.JsonSyntaxException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
-
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
-import com.google.gson.JsonSyntaxException;
-
 import net.dothr.app.dto.AdminDto;
 import net.dothr.app.dto.DothrDto;
 import net.dothr.app.dto.MensajeDto;
@@ -34,15 +32,12 @@ import net.dothr.app.serv.AdminService;
 import net.dothr.app.serv._DemoService;
 import net.dothr.util.Constante;
 import net.dothr.util.DateUtily;
-//import net.tce.app.exception.SystemTCEException;
-//import net.tce.dto.MensajeDto;
-//import net.tce.exception.FileException;
 import net.dothr.util.Mensaje;
 import net.dothr.util.UtilsTce;
 
 public abstract class AbstractCtrlRest {
 
-	static final Logger log4j = LogManager.getLogger( AbstractCtrlRest.class );
+	private static final Logger log4j = LoggerFactory.getLogger(AbstractCtrlRest.class);
 	
 	final String DIVISOR_HTTP=" -HTTP- ";
 	final int HTTP_ERROR_CLIENT_4xx_INI=400;
@@ -283,7 +278,7 @@ public abstract class AbstractCtrlRest {
 			}else {
 				lsMensajeDto=gson.fromJson(mensaje, new TypeToken<List<MensajeDto>>(){}.getType());
 				 log4j.error("mensajeErrorPolitica() -> lsMensajeDto: "+lsMensajeDto != null ? 
-						 												lsMensajeDto.size():null);
+						 												String.valueOf(lsMensajeDto.size()):null);
 				if(lsMensajeDto.size() > 0) {
 					mensajeDto=lsMensajeDto.get(0);
 				}

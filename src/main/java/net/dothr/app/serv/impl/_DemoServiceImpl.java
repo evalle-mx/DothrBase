@@ -1,10 +1,9 @@
 package net.dothr.app.serv.impl;
 
 import java.io.IOException;
+import java.lang.invoke.MethodHandles;
 import java.util.List;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
 
 import net.dothr.app.dao.UserDao;
@@ -13,6 +12,8 @@ import net.dothr.app.dto.aux.TourFromFile;
 import net.dothr.app.serv._DemoService;
 import net.dothr.util.Mensaje;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 
@@ -20,7 +21,7 @@ import org.springframework.http.HttpStatus;
 //@Transactional
 public class _DemoServiceImpl implements _DemoService {
 	
-	static final Logger log4j = LogManager.getLogger( _DemoServiceImpl.class );
+	private static final Logger log4j = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
 	@Autowired
 	UserDao userDao;
